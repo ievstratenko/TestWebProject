@@ -17,11 +17,11 @@ public class PersonController {
 
 	@RequestMapping	
 	public @ResponseBody String getPerson() {
-		return personService.findOne(1).toString();
+		return "Person : " + personService.findOne(1).toString();
 	}
 	
 	@RequestMapping("hello")
-	public String hello(Model model) {
+	public String hello(Model model) {		
 		model.addAttribute("time", new Date());
 		return "hello";
 	}
