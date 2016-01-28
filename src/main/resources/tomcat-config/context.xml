@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context antiResourceLocking="true">
+
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+
+    <Manager pathname="" />
+    <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
+
+    <Resource name="dataSource"
+              type="javax.sql.DataSource"
+              username="root"
+              password="password"
+              url="jdbc:mysql://localhost:3306/testdb?useSSL=false"
+              driverClassName="com.mysql.jdbc.Driver"/>
+</Context>

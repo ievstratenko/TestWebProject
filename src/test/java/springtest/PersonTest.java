@@ -17,11 +17,11 @@ import spring.person.service.PersonService;
 public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Resource
 	PersonService service;
-	
+
 	@Test
 	public void dummyTest() {
-		//System.out.println(service.findOne(1));
-		//service.delete(new Person("Sara"));
-		service.delete(3);
+		System.out.println(service.findOne(1));
+		// service.delete(new Person("Sara"));
+		// service.delete(3);
 	}
 }
