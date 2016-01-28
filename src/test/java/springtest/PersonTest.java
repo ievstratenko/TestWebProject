@@ -20,6 +20,7 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Test
 	public void read() {
 		// test
+		// added by Ira
 		System.out.println(service.findOne(1));
 	}
 }
