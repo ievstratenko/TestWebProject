@@ -6,7 +6,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.*;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import spring.person.service.PersonService;
 
@@ -18,9 +19,9 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	PersonService service;
 	
 	@Test
-	public void read() {
-		// test
-		// added by Ira
-		System.out.println(service.findOne(1));
+	public void dummyTest() {
+		//System.out.println(service.findOne(1));
+		//service.delete(new Person("Sara"));
+		service.delete(3);
 	}
 }
