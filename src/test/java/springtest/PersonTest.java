@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import spring.person.model.Person;
 import spring.person.service.PersonService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -20,8 +21,7 @@ public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 
 	@Test
 	public void dummyTest() {
-		System.out.println(service.findOne(1));
-		// service.delete(new Person("Sara"));
-		// service.delete(3);
+		System.out.println(service.findAll());
+		service.save(new Person("Sara"));
 	}
 }
