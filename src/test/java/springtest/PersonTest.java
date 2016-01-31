@@ -8,6 +8,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.*;
 
+import spring.person.model.Person;
 import spring.person.service.PersonService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -16,9 +17,10 @@ import spring.person.service.PersonService;
 public class PersonTest extends AbstractTransactionalJUnit4SpringContextTests {
 	@Resource
 	PersonService service;
-	
+
 	@Test
-	public void read() {
-		System.out.println(service.findOne(1));
+	public void dummyTest() {
+		System.out.println(service.findAll());
+		service.save(new Person("Sara"));
 	}
 }
