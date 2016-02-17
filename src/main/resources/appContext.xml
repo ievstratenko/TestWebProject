@@ -12,7 +12,6 @@
 
 	<jpa:repositories base-package="spring" />
 	<context:component-scan base-package="spring" />
-	<context:annotation-config />
 	<tx:annotation-driven />
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
