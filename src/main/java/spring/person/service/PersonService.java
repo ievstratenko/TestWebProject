@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import spring.person.dao.PersonDao;
 import spring.person.model.Person;
@@ -18,18 +19,21 @@ public class PersonService {
 		return personDao.findOne(person);
 	}
 
-	public void delete(Integer person) {
-		personDao.delete(person);
-	}
-
-	public void delete(Person person) {
-		personDao.delete(person);
-	}
-
 	public List<Person> findAll() {
 		return personDao.findAll();
 	}
 
+	@Transactional
+	public void delete(Integer person) {
+		personDao.delete(person);
+	}
+
+	@Transactional
+	public void delete(Person person) {
+		personDao.delete(person);
+	}
+
+	@Transactional
 	public Person save(Person person) {
 		return personDao.save(person);
 	}
